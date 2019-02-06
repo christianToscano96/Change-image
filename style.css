@@ -45,16 +45,20 @@ body{
 }
 
 /*caja que se desliza*/
-.container .column .content .box {
+.container .column .content .box { 
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(100%);
     box-sizing: border-box;
     padding: 40px;
     background: rgba(255, 255, 255, 1);
     text-align: center;
     transition: 0.5s;
+    opacity: 0;
+}
+.container .column.active .content .box {
     opacity: 1;
+    transform: translateY(-50%);
 }
 .container .column .content .box h2 {
     margin: 0;
@@ -72,4 +76,34 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.container .column.active .bg.bg1 {
+    background: url('img/bg1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    transition: 0.5s;
+}
+.container .column.active .bg.bg2 {
+    background: url('img/bg2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    transition: 0.5s;
+}
+.container .column.active .bg.bg3 {
+    background: url('img/bg3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    transition: 0.5s;
+}
+.container .column.active .bg.bg4 {
+    background: url('img/bg4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    transition: 0.5s;
 }
